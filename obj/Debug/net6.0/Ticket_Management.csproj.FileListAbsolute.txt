@@ -56,3 +56,15 @@
 /Users/presidio/Projects/Ticket_Management/obj/Debug/net6.0/Ticket_Management.pdb
 /Users/presidio/Projects/Ticket_Management/obj/Debug/net6.0/Ticket_Management.genruntimeconfig.cache
 /Users/presidio/Projects/Ticket_Management/obj/Debug/net6.0/ref/Ticket_Management.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Scrutor.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Swashbuckle.AspNetCore.Filters.dll
+/Users/presidio/Projects/Ticket_Management/bin/Debug/net6.0/Swashbuckle.AspNetCore.Filters.Abstractions.dll
