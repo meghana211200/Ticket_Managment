@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Crypto.Generators;
 using Ticket_Management.Models;
+using Ticket_Management.Data;
 using bcrypt = BCrypt.Net.BCrypt;
 
 namespace Ticket_Management.Controllers
@@ -31,6 +32,17 @@ namespace Ticket_Management.Controllers
                     userInfo.user_password = bcrypt.HashPassword(userInfo.user_password, 12);
                     _context.User.Add(userInfo);
                     await _context.SaveChangesAsync();
+                    if (userInfo.user_role == "se")
+                    {
+                        var supportEngineer = new SupportEngineer
+                        {
+                            se_user_id = userInfo.user_id,
+                            isAvailable = true
+
+                        };
+                        _context.SupportEngineer.Add(supportEngineer);
+                        await _context.SaveChangesAsync();
+                    }
                     return Ok("User Created Successfully");
                 }
                 else

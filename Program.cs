@@ -1,4 +1,4 @@
-﻿using Ticket_Management.Models;
+﻿using Ticket_Management.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,7 +9,9 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = "server=localhost; port=3306; user=root; password=password; database=ticket_management";
+//var connectionString = "server=localhost; port=3306; user=root; password=password; database=ticket_management";
+var connectionString = builder.Configuration.GetConnectionString("LocalConnection");
+
 builder.Services.AddDbContext<TicketManagementDbContext>(options =>
 {
     // options. (builder.Configuration.GetConnectionString("Mysql"));
@@ -17,7 +19,9 @@ builder.Services.AddDbContext<TicketManagementDbContext>(options =>
 });
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options => {
     options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
@@ -46,6 +50,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

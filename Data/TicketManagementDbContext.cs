@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Ticket_Management.Models;
 
-namespace Ticket_Management.Models
+namespace Ticket_Management.Data
 {
     public partial class TicketManagementDbContext : DbContext
     {
@@ -10,10 +10,9 @@ namespace Ticket_Management.Models
         {
         }
         public DbSet<User> User { get; set; }
-        public DbSet<SupportEngineer> SupportEngineer { get; set; }
         public DbSet<Ticket> Ticket { get; set; }
+        public DbSet<SupportEngineer> SupportEngineer { get; set; }
         public DbSet<TicketTracker> TicketTracker { get; set; }
     }
-
 }
 

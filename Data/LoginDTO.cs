@@ -1,6 +1,4 @@
-﻿
-
-namespace Ticket_Management.Models
+﻿namespace Ticket_Management.Models
 {
     public class LoginDTO
     {
